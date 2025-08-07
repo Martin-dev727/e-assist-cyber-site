@@ -1,119 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Digital services including printing, scanning, KRA and HELB applications at JOOUST">
+    <meta name="keywords" content="cyber services, printing, scanning, KRA, HELB, JOOUST">
+    <meta property="og:title" content="e-Assist Cyber Solutions">
+    <meta property="og:description" content="Digital services made easy at JOOUST">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="images/log.png">
     <title>e-Assist Cyber Solutions</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        :root {
+            --primary-color: #0077cc;
+            --secondary-color: #ff9900;
+            --text-color: #333;
+            --bg-light: #f4f4f4;
+            --white: #fff;
+        }
+
+        * {
             margin: 0;
-            background: #f4f4f4;
-            color: #333;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: var(--bg-light);
+            color: var(--text-color);
+            line-height: 1.6;
         }
 
         header {
-            background: #0077cc;
-            color: white;
+            background: var(--primary-color);
+            color: var(--white);
             padding: 2rem;
             text-align: center;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
+        .logo img {
+            height: 100px;
+            width: auto;
+            display: block;
+            margin: 0 auto;
+            transition: transform 0.3s ease;
         }
 
-        header p {
-            margin-top: 0.5rem;
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem;
+            gap: 2rem;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-text p {
             font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-img {
+            flex: 1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-img img {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .bg-shape {
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            background: var(--secondary-color);
+            border-radius: 12px;
+            top: 10%;
+            right: -20px;
+            z-index: 0;
         }
 
         .cta {
             display: inline-block;
-            margin-top: 1rem;
             padding: 0.75rem 1.5rem;
-            background: #ff9900;
-            color: white;
+            background: var(--secondary-color);
+            color: var(--white);
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .cta:hover {
+            background: #e68a00;
+            transform: translateY(-2px);
         }
 
         .services {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            padding: 2rem;
-            background: white;
+            gap: 2rem;
+            padding: 3rem 2rem;
+            background: var(--white);
         }
 
         .card {
-            background: #e9e9e9;
-            margin: 1rem;
-            padding: 1rem;
-            border-radius: 8px;
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 12px;
             width: 250px;
             text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .card h3 {
-            margin-top: 0.5rem;
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .card img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            margin-bottom: 1rem;
         }
 
         .bio {
-            padding: 2rem;
+            padding: 3rem 2rem;
             text-align: center;
-            background: #fff;
+            background: var(--white);
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .contact {
-            padding: 2rem;
-            background: #0077cc;
-            color: white;
+            padding: 3rem 2rem;
+            background: var(--primary-color);
+            color: var(--white);
             text-align: center;
         }
 
-        form {
-            max-width: 400px;
-            margin: auto;
+        .contact form {
+            max-width: 500px;
+            margin: 2rem auto;
         }
 
-        input,
-        textarea {
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .contact input,
+        .contact textarea {
             width: 100%;
             padding: 0.75rem;
             margin: 0.5rem 0;
-            border: none;
+            border: 2px solid transparent;
             border-radius: 5px;
+            transition: border-color 0.3s;
         }
 
-        button {
+        .contact input:focus,
+        .contact textarea:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+
+        .contact button {
+            width: 100%;
             padding: 0.75rem 1.5rem;
-            background: #ff9900;
-            color: white;
+            background: var(--secondary-color);
+            color: var(--white);
             border: none;
             border-radius: 5px;
             font-weight: bold;
             cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact button:hover {
+            background: #e68a00;
         }
 
         footer {
             text-align: center;
-            padding: 1rem;
+            padding: 1.5rem;
             background: #333;
-            color: white;
+            color: var(--white);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-img {
+                width: 100%;
+            }
+
+            .services {
+                padding: 2rem 1rem;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 
 <body>
-
     <header>
-        <h1>e-Assist Cyber Solutions</h1>
-        <p>Digital Services Made Easy at JOOUST</p>
-        <a href="#contact" class="cta">Get Help Now</a>
+        <div class="logo">
+            <img src="images/log.png" alt="e-assist Cyber Logo" />
+        </div>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>e-Assist Cyber Solutions</h1>
+                <p>Digital Services Made Easy at JOOUST</p>
+                <a href="#contact" class="cta">Get Help Now</a>
+            </div>
+            <div class="hero-img">
+                <div class="bg-shape"></div>
+                <img src="images/cyber image.png" alt="Cyber services illustration" />
+            </div>
+        </section>
     </header>
 
     <section class="bio">
@@ -122,18 +259,22 @@
 
     <section class="services">
         <div class="card">
+            <img src="images/printer.png" alt="Printing services icon" />
             <h3>Printing</h3>
             <p>High-quality prints in minutes.</p>
         </div>
         <div class="card">
+            <img src="images/scanner-icon.png" alt="Scanning services icon" />
             <h3>Scanning</h3>
             <p>Fast and clear document scans.</p>
         </div>
         <div class="card">
+            <img src="images/kra-icon.png" alt="KRA services icon" />
             <h3>KRA & HELB</h3>
             <p>Application support and guidance.</p>
         </div>
         <div class="card">
+            <img src="images/e-citizen logo.png" alt="e-Citizen services icon" />
             <h3>e-Citizen Services</h3>
             <p>Help with birth certs, IDs, and more.</p>
         </div>
@@ -143,18 +284,37 @@
         <h2>Contact Us</h2>
         <p>Located near JOOUST Main Gate</p>
         <p>📞 WhatsApp: <a href="https://wa.me/+254743945933" style="color: #fff;">+254743945933</a></p>
-        <form>
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
-            <textarea placeholder="Your Request" required></textarea>
+        <form id="contactForm" onsubmit="return validateForm(event)">
+            <div class="form-group">
+                <input type="text" id="name" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-group">
+                <textarea id="message" placeholder="Your Request" rows="4" required></textarea>
+            </div>
             <button type="submit">Send Request</button>
         </form>
     </section>
 
     <footer>
-        <p>© 2025 e-Assist Cyber Solutions | Powered by Martin</p>
+        <p>© 2025 e-Assist Cyber Solutions | Powered by Martin Okelo</p>
     </footer>
 
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            if (name && email && message) {
+                alert('Thank you for your message! We will get back to you soon.');
+                event.target.reset();
+            }
+            return false;
+        }
+    </script>
 </body>
-
 </html>
