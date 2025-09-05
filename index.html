@@ -1,325 +1,161 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Digital services including printing, scanning, KRA and HELB applications at JOOUST">
-    <meta name="keywords" content="cyber services, printing, scanning, KRA, HELB, JOOUST">
-    <meta property="og:title" content="e-Assist Cyber Solutions">
-    <meta property="og:description" content="Digital services made easy at JOOUST">
-    <meta property="og:type" content="website">
-    <link rel="icon" type="image/png" href="images/log.png">
-    <title>e-Assist Cyber Solutions</title>
-    <style>
-        :root {
-            --primary-color: #0077cc;
-            --secondary-color: #ff9900;
-            --text-color: #333;
-            --bg-light: #f4f4f4;
-            --white: #fff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            background: var(--bg-light);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        header {
-            background: var(--primary-color);
-            color: var(--white);
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .logo img {
-            height: 100px;
-            width: auto;
-            display: block;
-            margin: 0 auto;
-            transition: transform 0.3s ease;
-        }
-
-        .logo img:hover {
-            transform: scale(1.05);
-        }
-
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 2rem;
-            gap: 2rem;
-        }
-
-        .hero-text {
-            flex: 1;
-        }
-
-        .hero-text h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero-text p {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-img {
-            flex: 1;
-            position: relative;
-            display: flex;
-            justify-content: center;
-        }
-
-        .hero-img img {
-            width: 100%;
-            max-width: 450px;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-        .bg-shape {
-            position: absolute;
-            width: 80%;
-            height: 80%;
-            background: var(--secondary-color);
-            border-radius: 12px;
-            top: 10%;
-            right: -20px;
-            z-index: 0;
-        }
-
-        .cta {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            background: var(--secondary-color);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .cta:hover {
-            background: #e68a00;
-            transform: translateY(-2px);
-        }
-
-        .services {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
-            padding: 3rem 2rem;
-            background: var(--white);
-        }
-
-        .card {
-            background: var(--bg-light);
-            padding: 1.5rem;
-            border-radius: 12px;
-            width: 250px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .card img {
-            width: 70px;
-            height: 70px;
-            object-fit: contain;
-            margin-bottom: 1rem;
-        }
-
-        .bio {
-            padding: 3rem 2rem;
-            text-align: center;
-            background: var(--white);
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .contact {
-            padding: 3rem 2rem;
-            background: var(--primary-color);
-            color: var(--white);
-            text-align: center;
-        }
-
-        .contact form {
-            max-width: 500px;
-            margin: 2rem auto;
-        }
-
-        .form-group {
-            margin-bottom: 1rem;
-        }
-
-        .contact input,
-        .contact textarea {
-            width: 100%;
-            padding: 0.75rem;
-            margin: 0.5rem 0;
-            border: 2px solid transparent;
-            border-radius: 5px;
-            transition: border-color 0.3s;
-        }
-
-        .contact input:focus,
-        .contact textarea:focus {
-            outline: none;
-            border-color: var(--secondary-color);
-        }
-
-        .contact button {
-            width: 100%;
-            padding: 0.75rem 1.5rem;
-            background: var(--secondary-color);
-            color: var(--white);
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .contact button:hover {
-            background: #e68a00;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            background: #333;
-            color: var(--white);
-        }
-
-        @media (max-width: 768px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .hero-img {
-                width: 100%;
-            }
-
-            .services {
-                padding: 2rem 1rem;
-            }
-
-            .card {
-                width: 100%;
-                max-width: 300px;
-            }
-
-            .hero-text h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>E-Assist Cyber Solutions —JOOUST-Bondo Cyber Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+  <meta name="description" content="E-Assist Cyber Solutions — Printing, scanning, KRA, HELB, eCitizen, SHA and online application services at JOOUST. Fast, reliable, and confidential." />
 </head>
-
 <body>
-    <header>
-        <div class="logo">
-            <img src="log.png" alt="e-assist Cyber Logo" />
+  <header>
+    <div class="topbar container">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="E-Assist logo" />
+        <div>
+          <div class="name">E-Assist Cyber Solutions </div>
+          <div class="tag">JOOUST — Bondo Online services  • eCitizen • HELB • KRA • SHA</div>
         </div>
-        <section class="hero">
-            <div class="hero-text">
-                <h1>e-Assist Cyber Solutions</h1>
-                <p>Digital Services Made Easy at JOOUST</p>
-                <a href="#contact" class="cta">Get Help Now</a>
-            </div>
-            <div class="hero-img">
-                <div class="bg-shape"></div>
-                <img src="cyber-image.png" alt="Cyber services illustration" />
-            </div>
+      </a>
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav>
+        <a href="index.html" style="color:#0f172a">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="web-design.html">Web Design</a>
+        <a href="faq.html">FAQ</a>
+        <a class="cta" href="tel:+254743945933">Call / WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+  
+  <main class="container">
+    <section class="hero">
+      <div>
+        <span class="eyebrow">Local · Trusted · Fast</span>
+        <h1>Your Trusted Cyber Services Hub — Fast, Reliable, Affordable</h1>
+        <p class="lead">Online Applications, Scanning, HELB, KRA, eCitizen & SHA Services — All in One Place.</p>
+        <section>
+        <div class="urgency">
+          <strong>⏰ Open Monday-Friday&Sunday!</strong> Walk in now or call ahead — avoid the rush and get your documents processed immediately.
+        </strong><strong>Closed Saturday!</strong>
+      </div>
         </section>
-    </header>
-
-    <section class="bio">
-        <p>Hi, I'm Martin, founder of e-Assist Cyber Solutions. We help students and professionals at JOOUST and beyond with fast, reliable digital services—from printing and scanning to KRA and HELB applications. With a passion for tech and a commitment to service, we make your online tasks simple and stress-free.</p>
+        
+        <div class="actions">
+          <a class="btn" href="tel:+254743945933">📞 Call or WhatsApp</a>
+          <a class="btn secondary" href="services.html">See Services & Prices</a>
+        </div>
+        
+        <div class="card" style="margin-top:16px">
+          <strong>Our Promise</strong><br/>
+          No guesswork, no hidden fees. We guide you step-by-step and keep your data 100% confidential.
+          <span class="guarantee-badge">100% Money-Back Guarantee</span>
+        </div>
+      </div>
+      <img src="assets/cyber image.png" alt="cyber café hero image" />
     </section>
 
-    <section class="services">
-        <div class="card">
-            <img src="printer.png" alt="Printing services icon" />
-            <h3>Printing</h3>
-            <p>High-quality prints in minutes.</p>
-        </div>
-        <div class="card">
-            <img src="scanner-icon.png" alt="Scanning services icon" />
-            <h3>Scanning</h3>
-            <p>Fast and clear document scans.</p>
-        </div>
-        <div class="card">
-            <img src="kra-icon.png" alt="KRA services icon" />
-            <h3>KRA & HELB</h3>
-            <p>Application support and guidance.</p>
-        </div>
-        <div class="card">
-            <img src="e-citizen.png" alt="e-Citizen services icon" />
-            <h3>e-Citizen Services</h3>
-            <p>Help with birth certs, IDs, and more.</p>
-        </div>
+    <!-- Trust Signals -->
+    <section class="trust-signals">
+      <div class="trust-signal">
+        <strong>50+</strong>
+        <div>Happy Customers</div>
+      </div>
+      <div class="trust-signal">
+        <strong>10min</strong>
+        <div>Average Service Time</div>
+      </div>
+      <div class="trust-signal">
+        <strong>99%</strong>
+        <div>Success Rate</div>
+      </div>
     </section>
 
-    <section class="contact" id="contact">
-        <h2>Contact Us</h2>
-        <p>Located near JOOUST Main Gate</p>
-        <p>📞 WhatsApp: <a href="https://wa.me/+254743945933" style="color: #fff;">+254743945933</a></p>
-        <form id="contactForm" onsubmit="return validateForm(event)">
-            <div class="form-group">
-                <input type="text" id="name" placeholder="Your Name" required />
-            </div>
-            <div class="form-group">
-                <input type="email" id="email" placeholder="Your Email" required />
-            </div>
-            <div class="form-group">
-                <textarea id="message" placeholder="Your Request" rows="4" required></textarea>
-            </div>
-            <button type="submit">Send Request</button>
-        </form>
+    <section class="section">
+      <h2>How It Works</h2>
+      <div class="grid-3">
+        <div class="service">
+          <strong>1. Tell Us Your Need</strong>
+          <p class="lead">Walk in or message us.</p>
+        </div>
+        <div class="service">
+          <strong>2. We Handle the Work</strong>
+          <p class="lead">Done correctly the first time.</p>
+        </div>
+        <div class="service">
+          <strong>3. You Get Results Fast</strong>
+          <p class="lead">Avoid delays & penalties.</p>
+        </div>
+      </div>
     </section>
 
-    <footer>
-        <p>© 2025 e-Assist Cyber Solutions | Powered by Martin Okelo</p>
-    </footer>
+    <section class="section">
+      <h2>Featured Services</h2>
+      <div class="grid-3">
+        <div class="service">
+          <img src="assets/services/printing.png" alt="Printing & Photocopying" />
+          <strong>e-Citizen Services</strong>
+          <p class="lead">Passport, ID & Driving Licence applications in minutes.</p>
+          <div class="card"><strong>From KSh 300</strong></div>
+        </div>
+        <div class="service">
+          <img src="assets/services/applications.png" alt="Online Applications" />
+          <strong>Online Applications</strong>
+          <p class="lead">Avoid mistakes — we fill forms correctly.</p>
+          <div class="card"><strong>From KSh 300</strong></div>
+        </div>
+        <div class="service">
+          <img src="assets/sha logo.jpg" alt="SHA Services" />
+          <strong>SHA Services</strong>
+          <p class="lead">Quick, confidential assistance for SHA registration & dependant update.</p>
+          <div class="card"><strong>From KSh 150</strong></div>
+        </div>
+      </div>
+    </section>
 
-    <script>
-        function validateForm(event) {
-            event.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            if (name && email && message) {
-                alert('Thank you for your message! We will get back to you soon.');
-                event.target.reset();
-            }
-            return false;
-        }
-    </script>
+    <section class="section">
+      <h2>What Customers Say</h2>
+      <div class="grid-2">
+        <div class="social-proof">
+          <strong>"HELB renewal done in minutes!"</strong>
+          <div class="lead">— Catherine A., Bondo TTI Student</div>
+          <div style="margin-top: 8px; color: #f59e0b;">⭐⭐⭐⭐⭐</div>
+        </div>
+        <div class="social-proof">
+          <strong>"Professional and patient — highly recommended."</strong>
+          <div class="lead">— Steve O., Local Resident</div>
+          <div style="margin-top: 8px; color: #f59e0b;">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+      
+      <div class="card" style="margin-top: 32px; text-align: center;">
+        <h3>Why Students & Locals Choose Us</h3>
+        <div class="grid-3" style="margin-top: 16px;">
+          <div>✅ No appointment needed</div>
+          <div>✅ Student-friendly prices</div>
+          <div>✅ Expert guidance included</div>
+        </div>
+        <div class="actions">
+          <a class="btn" href="tel:+254743945933">Get Started Now</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div><strong>©2025Powered by Martin Okelo </strong> <strong>E-Assist Cyber Solutions</strong> — <strong>BONDO</strong> • <span class="muted"><strong>+254 743 945 933</strong>
+    </div>
+    <div class="muted"><strong>•Modern • Privacy-first • Reliable</strong></div>
+  </footer>
+  
+  <a class="whatsapp" href="https://wa.me/254743945933" target="_blank" rel="noopener">💬 WhatsApp</a>
+  <script src="assets/hamburger.js"></script>
 </body>
 </html>
-
-
-
-
 
