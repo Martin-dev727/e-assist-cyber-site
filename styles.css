@@ -98,28 +98,47 @@ nav a.cta:hover {
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
-/* Hamburger Menu */
+/* Hamburger button */
 .hamburger {
   display: none;
   flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
   cursor: pointer;
-  padding: 8px;
-  gap: 4px;
-  background: none;
   border: none;
-  z-index: 1001;
+  background: none;
+  padding: 0;
+  z-index: 1001; /* stays above nav */
 }
 
 .hamburger span {
-  width: 24px;
+  display: block;
   height: 3px;
+  width: 100%;
   background: #0f172a;
+  border-radius: 3px;
   transition: all 0.3s ease;
-  border-radius: 2px;
 }
 
+/* Mobile only */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.show {
+    display: flex;
+  }
+}
+
+/* Animation for "X" when active */
 .hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 6px);
+  transform: rotate(45deg) translate(5px, 5px);
 }
 
 .hamburger.active span:nth-child(2) {
@@ -130,13 +149,8 @@ nav a.cta:hover {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Mobile Navigation */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
 
-  nav {
+  nav{
     position: fixed;
     top: 80px;
     left: 0;
